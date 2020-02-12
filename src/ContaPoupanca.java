@@ -31,7 +31,7 @@ public class ContaPoupanca implements Conta {
 
         if(this.saldo >= valor){
 
-            this.saldo -= saldo;
+            this.saldo -= valor;
 
         }else{
 

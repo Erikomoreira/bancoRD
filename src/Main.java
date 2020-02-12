@@ -23,8 +23,9 @@ public class Main {
         contaPouanca.depositar(100);
         contaPouanca.recolherJuros();
         contaPouanca.consultar();
-        contaPouanca.consultar();
         contaPouanca.sacar(100);
+        contaPouanca.consultar();
+
 
     }
 }
