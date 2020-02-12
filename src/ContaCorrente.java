@@ -47,9 +47,15 @@ public class ContaCorrente implements Conta {
 
             this.saldo -= saldo;
 
-        }else if(this.chequeEspecial >= valor ){
+            System.out.println("Saque realizado com sucesso");
 
-            this.chequeEspecial -= valor;
+        }else if((this.chequeEspecial + saldo) >= valor ){
+
+            double resto = valor - saldo;
+            this.chequeEspecial -= resto;
+            this.saldo = this.saldo - valor;
+
+            System.out.println("Saque realizado com sucesso");
 
         }else{
 
