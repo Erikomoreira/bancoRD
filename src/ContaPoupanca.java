@@ -33,8 +33,6 @@ public class ContaPoupanca implements Conta {
 
             this.saldo -= saldo;
 
-            System.out.println("Saque realizado com sucesso " + " Saldo Atual: " + this.saldo);
-
         }else{
 
             System.out.println("Saldo insuficiente");
@@ -46,25 +44,15 @@ public class ContaPoupanca implements Conta {
     @Override
     public void consultar() {
 
-        System.out.println("O saldo atual é : " + this.saldo + " O saldo de juros eh " + this.juros);
+        System.out.println("O saldo atual é : " + this.saldo);
 
     }
 
-    public void recolherJuros(double valor){
+    public void recolherJuros(){
 
-        if(this.juros >= valor) {
+        double saldoConta = this.saldo + (juros * this.saldo);
 
-            this.juros -= valor;
-
-            System.out.println("Saque de juros realizado com sucesso " + " Saldo de Juros Atual: " + this.juros);
-
-
-        }else {
-
-            System.out.println("Saldo de juros insuficiente");
-
-        }
-
+        this.saldo = saldoConta;
 
     }
 

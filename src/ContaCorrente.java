@@ -11,8 +11,6 @@ public class ContaCorrente implements Conta {
         this.cliente = cliente;
     }
 
-
-
     @Override
     public void depositar(double valor) {
 
@@ -40,8 +38,6 @@ public class ContaCorrente implements Conta {
             System.out.println("O valor informado não pode ser depositado");
         }
 
-
-
     }
 
     @Override
@@ -51,15 +47,10 @@ public class ContaCorrente implements Conta {
 
             this.saldo -= saldo;
 
-            System.out.println("Saque realizado com sucesso " + " Conta: "
-                    + this.saldo + " Cheque Especial " + this.chequeEspecial + " Saldo Atual: " + (this.saldo + this.chequeEspecial));
-
         }else if(this.chequeEspecial >= valor ){
 
             this.chequeEspecial -= valor;
 
-            System.out.println("Saque realizado com sucesso  " + " Conta: "
-                    + this.saldo + " Cheque Especial " + this.chequeEspecial + " Saldo Atual: " + (this.saldo + this.chequeEspecial));
         }else{
 
             System.out.println("Saldo insuficiente");
